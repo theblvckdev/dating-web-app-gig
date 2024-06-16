@@ -1,19 +1,11 @@
 import { useState } from "react";
-import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  PopoverGroup,
-} from "@headlessui/react";
+import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { IoCloseOutline, IoMenuOutline } from "react-icons/io5";
-import { GoTriangleDown } from "react-icons/go";
 import { Link } from "react-router-dom";
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
+// function classNames(...classes: string[]) {
+//   return classes.filter(Boolean).join(" ");
+// }
 
 interface NavbarDataTypes {
   path: string;
@@ -85,14 +77,14 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">R4M</span>
             <img
               className="h-8 w-auto"
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
               alt="R4M logo"
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -197,7 +189,7 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
+                {/* <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
                       <DisclosureButton className="flex w-full outline-none items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-poppins">
@@ -221,25 +213,27 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
                       </DisclosurePanel>
                     </>
                   )}
-                </Disclosure>
-                <a
-                  href="#"
-                  className="-mx-3 block outline-none rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Features
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block outline-none rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block outline-none rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Company
-                </a>
+                </Disclosure> */}
+
+                {navbarData.map((data, index) => {
+                  const { text, path } = data;
+
+                  location.pathname === path
+                    ? (data.isActive = true)
+                    : (data.isActive = false);
+
+                  return (
+                    <Link
+                      key={index}
+                      to={path}
+                      className={`-mx-3 block outline-none rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 ${
+                        data.isActive && "bg-gray-50"
+                      }`}
+                    >
+                      {text}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>

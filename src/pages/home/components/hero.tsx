@@ -38,7 +38,7 @@ const Hero = () => {
         {/* overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40"></div>
         <div className="min-w-3xl w-full flex flex-col items-center justify-center z-10">
-          <h1 className="text-white text-6xl font-bold font-rubik uppercase">
+          <h1 className="text-white text-center lg:text-6xl md:text-5xl text-3xl font-bold font-rubik uppercase">
             Make the next move{" "}
           </h1>
         </div>
