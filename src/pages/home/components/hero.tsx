@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import HeroImage from "../assets/images/hero.jpg";
 import { Blurhash } from "react-blurhash";
+import QrCode from "../assets/images/qr_code.png";
+import Button from "../../../components/ui/button";
 
 const Hero = () => {
   const [imageLoading, setImageLoading] = useState<boolean>(false);
@@ -25,7 +27,7 @@ const Hero = () => {
             />
           ) : (
             <Blurhash
-              hash="L59H9KEl9Y^-7%n$wuNe00#k-p9E"
+              hash="LQF=HlV?NM-o?^V@RpSiKkR*WVW="
               width={"100%"}
               height={"100%"}
               resolutionX={32}
@@ -36,11 +38,21 @@ const Hero = () => {
         </div>
 
         {/* overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20"></div>
         <div className="min-w-3xl w-full flex flex-col items-center justify-center z-10">
-          <h1 className="text-white text-center lg:text-6xl md:text-5xl text-3xl font-bold font-rubik uppercase">
+          <h1 className="text-primary-0 text-center lg:text-7xl md:text-6xl text-4xl font-bold font-oswald uppercase">
             Make the next move{" "}
           </h1>
+
+          <div className="my-5 mx-auto xl:w-[13%] w-[20%] md:block hidden">
+            <img src={QrCode} className="w-full h-full" alt="R4M qrcode" />
+          </div>
+          <h3 className="text-primary-0 md:mt-0 mt-3 text-xl font-poppins text-center">
+            It's better on the app
+          </h3>
+          <div className="mt-3">
+            <Button text="Download now" />
+          </div>
         </div>
       </section>
     </>
