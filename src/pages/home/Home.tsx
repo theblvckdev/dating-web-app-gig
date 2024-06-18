@@ -2,6 +2,7 @@ import Navbar from "../../components/ui/navbar";
 import "./assets/style/home.scss";
 import Hero from "./components/hero";
 import SectionOne from "./components/section_one";
+import SectionTwo from "./components/section_two";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <main className="home overflow-x-hidden">
         <Hero />
         <SectionOne />
+        <SectionTwo />
       </main>
     </>
   );
