@@ -1,24 +1,24 @@
-// import { useEffect } from "react";
-// import HeroImage from "../assets/images/hero.jpg";
-// import { Blurhash } from "react-blurhash";
-// import QrCode from "../assets/images/qr_code.png";
-// import Button from "../../../components/ui/button";
+import { useEffect, useState } from "react";
+import HeroImage from "../assets/images/hero.jpg";
+import { Blurhash } from "react-blurhash";
+import QrCode from "../assets/images/qr_code.png";
+import Button from "../../../components/ui/button";
 
 const Hero = () => {
-  // const [imageLoading, setImageLoading] = useState<boolean>(false);
+  const [imageLoading, setImageLoading] = useState<boolean>(false);
 
-  // useEffect(() => {
-  //   const img = new Image();
-  //   img.onload = () => {
-  //     setImageLoading(true);
-  //   };
-  //   img.src = HeroImage;
-  // }, []);
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setImageLoading(true);
+    };
+    img.src = HeroImage;
+  }, []);
 
   return (
     <>
-      <section className="h-screen w-screen flex items-center relative overflow-hidden bg-white">
-        {/* <div className="absolute top-0 left-0 w-full h-full">
+      <section className="h-screen w-screen flex items-center justify-center flex-col relative overflow-hidden bg-white">
+        <div className="absolute top-0 left-0 w-full h-full">
           {imageLoading ? (
             <img
               src={HeroImage}
@@ -27,7 +27,7 @@ const Hero = () => {
             />
           ) : (
             <Blurhash
-              hash="LQF=HlV?NM-o?^V@RpSiKkR*WVW="
+              hash="L,JR8C%Mogof~pxubIa}tRWWa}fk"
               width={"100%"}
               height={"100%"}
               resolutionX={32}
@@ -35,23 +35,34 @@ const Hero = () => {
               punch={1}
             />
           )}
-        </div> */}
+        </div>
 
-        <div className="mx-auto w-full max-w-7xl items-center justify-between p-4 lg:px-8">
-          <div className="flex items-center">
-            <div className="basis-2/3">
-              <h3 className="text-3xl font-poppins">Find your soul mate</h3>
-              <h1 className="text-8xl font-poppins font-bold text-primary-0">
-                From your comfort zone
-              </h1>
+        {/* image overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 z-10"></div>
 
-              <p className="mt-3 text-gray-500 text-xl max-w-md font-poppins">
-                We built a platform for people to find their love without being
-                judged
-              </p>
-            </div>
-            <div className="basis-1/3"></div>
-          </div>
+        {/* hero text */}
+        <h1 className="lg:text-7xl md:text-6xl text-4xl font-oswald text-primary-0 font-bold uppercase z-10">
+          MAKE THE NEXT MOVE
+        </h1>
+
+        <div className="h-[170px] w-[170px] md:block hidden my-5 overflow-hidden z-10">
+          <img
+            src={QrCode}
+            className="w-full h-full object-cover rounded-md"
+            alt="r4m qr_code"
+          />
+        </div>
+
+        <p className="font-poppins md:mt-0 mt-3 text-primary-0 text-xl z-10">
+          It's better on the app.
+        </p>
+        <div className="z-10 mt-3">
+          <Button
+            text="Download now"
+            bgVariant="bg-white"
+            color="text-gray-900"
+            hover="hover:bg-gray-100 duration-200 ease-in"
+          />
         </div>
       </section>
     </>
