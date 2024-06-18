@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { IoCloseOutline, IoMenuOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+// import LogoImage from "../../assets/svg/r4m.svg";
 
 // function classNames(...classes: string[]) {
 //   return classes.filter(Boolean).join(" ");
@@ -73,17 +74,16 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
   return (
     <header className={`${bgVariant} fixed top-0 left-0 w-screen z-50`}>
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between py-4 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">R4M</span>
-            <img
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt="R4M logo"
-            />
+            {/* <img className="h-14 w-auto" src={LogoImage} alt="R4M logo" /> */}
+            <h1 className="text-secondary-0 text-4xl font-bold tracking-[-0.4rem] font-poppins">
+              R4M
+            </h1>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -96,7 +96,7 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
             <IoMenuOutline className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-7">
+        <PopoverGroup className="hidden lg:flex lg:gap-x-5">
           {/* <Link
             to="/"
             className={`text-sm font-poppins hover:underline leading-6 text-gray-900 ${
@@ -151,7 +151,7 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
               <Link
                 to={path}
                 key={index}
-                className={`text-sm hover:underline font-poppins leading-6 text-gray-900 ${
+                className={`text-sm hover:underline font-poppins leading-6 ${
                   data.isActive && "underline"
                 }`}
               >
