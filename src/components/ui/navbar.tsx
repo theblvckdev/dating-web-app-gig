@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { IoCloseOutline, IoMenuOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -54,6 +54,21 @@ const navbarData: NavbarDataTypes[] = [
 
 export default function Navbar({ bgVariant }: { bgVariant: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const [showNavbar, setShowNavbar] = useState<boolean>(true);
+
+  const changeNavbarState: () => void = () => {
+    if (window.scrollY <= 1000) {
+      setShowNavbar(true);
+    } else {
+      setShowNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    changeNavbarState();
+
+    window.addEventListener("scroll", changeNavbarState);
+  }, []);
 
   // const [isHomepage, setIsHomepage] = useState<boolean>(false);
 
@@ -72,9 +87,13 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
   // }, [location]);
 
   return (
-    <header className={`${bgVariant} fixed top-0 left-0 w-screen z-50`}>
+    <header
+      className={`${bgVariant} fixed top-0 duration-300 ease-in-out z-50 ${
+        showNavbar ? "top-0" : "-top-[20%]"
+      } left-0 w-screen z-50`}
+    >
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between py-4 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between py-4 lg:px-8 md:px-5 px-3"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">

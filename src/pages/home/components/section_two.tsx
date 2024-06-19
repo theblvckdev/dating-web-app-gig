@@ -1,7 +1,23 @@
 import { Link } from "react-router-dom";
 import { categoriesData } from "../data/categories";
+import { Blurhash } from "react-blurhash";
+import { useState } from "react";
 
 const SectionTwo = () => {
+  const [imageLoading, setImageLoading] = useState<boolean>(false);
+
+  // const categoriesImage = categoriesData.map(data => {
+  //   return data.image
+  // })
+
+  // useEffect(() => {
+  //   const img = new Image();
+  //   img.onload = () => {
+  //     setImageLoading(true);
+  //   };
+  //   img.src = categoriesImage;
+  // }, [categoriesImage]);
+
   return (
     <>
       <section className="md:py-[6rem] py-[3rem] bg-white">
@@ -11,9 +27,15 @@ const SectionTwo = () => {
           </h1>
 
           <div className="mt-16">
-            <div className="flex gap-8">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
               {categoriesData.map((data, index) => {
-                const { title, image, content } = data;
+                const { title, image, content, blurHash } = data;
+
+                const img = new Image();
+                img.onload = () => {
+                  setImageLoading(true);
+                };
+                img.src = image;
 
                 return (
                   <Link
@@ -23,15 +45,26 @@ const SectionTwo = () => {
                   >
                     <div>
                       <div className="rounded-2xl h-[200px] w-full overflow-hidden">
-                        <img
-                          src={image}
-                          className="w-full h-full object-cover"
-                          alt={title}
-                        />
+                        {imageLoading ? (
+                          <img
+                            src={image}
+                            className="w-full h-full object-cover -z-10"
+                            alt="couples happy together at night"
+                          />
+                        ) : (
+                          <Blurhash
+                            hash={blurHash}
+                            width={"100%"}
+                            height={"100%"}
+                            resolutionX={32}
+                            resolutionY={32}
+                            punch={1}
+                          />
+                        )}
                       </div>
 
                       <div className="mt-5">
-                        <h4 className="text-4xl group-hover:underline font-poppins font-thin capitalize text-secondary-0">
+                        <h4 className="lg:text-4xl md:text-3xl text-3xl group-hover:underline font-poppins font-light capitalize text-secondary-0">
                           {title}
                         </h4>
 
