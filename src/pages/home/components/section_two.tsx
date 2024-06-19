@@ -22,7 +22,7 @@ const SectionTwo = () => {
     <>
       <section className="md:py-[6rem] py-[3rem] bg-white">
         <div className="mx-auto max-w-6xl xl:px-0 lg:px-10 md:px-10 px-3">
-          <h1 className="xl:text-8xl lg:text-7xl md:text-6xl text-3xl md:tracking-[-0.4rem] md:font-bold font-black font-oswald text-secondary-0">
+          <h1 className="xl:text-8xl lg:text-7xl md:text-6xl text-3xl md:tracking-tighter md:font-bold font-black font-oswald text-secondary-0">
             WE’RE NOT JUST FOR DATING
           </h1>
 
@@ -64,7 +64,7 @@ const SectionTwo = () => {
                       </div>
 
                       <div className="mt-5">
-                        <h4 className="lg:text-4xl md:text-3xl text-3xl group-hover:underline font-poppins font-light capitalize text-secondary-0">
+                        <h4 className="xl:text-4xl md:text-3xl text-3xl group-hover:underline font-poppins font-light capitalize text-secondary-0">
                           {title}
                         </h4>
 

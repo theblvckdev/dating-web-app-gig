@@ -20,7 +20,7 @@ const SectionOne = () => {
         <div className="mx-auto max-w-6xl xl:px-0 lg:px-10 md:px-10 px-3">
           <div className="flex md:flex-row flex-col-reverse lg:gap-20 gap-5 items-center">
             <div className="basis-1/2">
-              <h1 className="xl:text-8xl lg:text-7xl md:text-6xl text-[33px] md:tracking-[-0.4rem] font-bold font-oswald text-secondary-0 uppercase">
+              <h1 className="xl:text-8xl lg:text-7xl md:text-6xl text-[33px] md:tracking-tighter font-bold font-oswald text-secondary-0 uppercase">
                 BRING YOUR <br className="md:block hidden" /> BAR BACK UP{" "}
                 <br className="md:block hidden" /> TO WHERE{" "}
                 <br className="md:block hidden" /> IT BELONGS

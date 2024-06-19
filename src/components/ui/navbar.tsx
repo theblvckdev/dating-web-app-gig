@@ -245,8 +245,8 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
                     <Link
                       key={index}
                       to={path}
-                      className={`-mx-3 block outline-none rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 ${
-                        data.isActive && "bg-gray-50"
+                      className={`-mx-3 block outline-none rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hove:underline ${
+                        data.isActive && "underline"
                       }`}
                     >
                       {text}

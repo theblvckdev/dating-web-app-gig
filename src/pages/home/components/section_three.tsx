@@ -41,7 +41,7 @@ const SectionThree = () => {
             </div>
 
             <div className="basis-1/2">
-              <h1 className="xl:text-8xl lg:text-7xl md:text-6xl text-[33px] md:tracking-[-0.4rem] md:font-bold font-black font-oswald text-secondary-0 uppercase">
+              <h1 className="xl:text-8xl lg:text-7xl md:text-6xl text-[33px] md:tracking-tighter md:font-bold font-black font-oswald text-secondary-0 uppercase">
                 Make The <br className="md:block hidden" /> First move
               </h1>
 
