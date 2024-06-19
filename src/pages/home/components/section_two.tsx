@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { categoriesData } from "../data/categories";
 import { Blurhash } from "react-blurhash";
 import { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const SectionTwo = () => {
   const [imageLoading, setImageLoading] = useState<boolean>(false);
@@ -44,12 +45,13 @@ const SectionTwo = () => {
                     className="group no-underline outline-none basis-1/3"
                   >
                     <div>
-                      <div className="rounded-2xl h-[200px] w-full overflow-hidden">
+                      <div className="rounded-2xl bg-gray-100 h-[200px] w-full overflow-hidden">
                         {imageLoading ? (
-                          <img
-                            src={image}
-                            className="w-full h-full object-cover -z-10"
-                            alt="couples happy together at night"
+                          <LazyLoadImage
+                            alt={title}
+                            height={"100%"}
+                            src={image} // use normal <img> attributes as props
+                            width={"100%"}
                           />
                         ) : (
                           <Blurhash
