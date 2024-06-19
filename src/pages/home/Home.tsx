@@ -1,6 +1,7 @@
 import Navbar from "../../components/ui/navbar";
 import "./assets/style/home.scss";
 import Hero from "./components/hero";
+import SectionFour from "./components/section_four";
 import SectionOne from "./components/section_one";
 import SectionThree from "./components/section_three";
 import SectionTwo from "./components/section_two";
@@ -14,6 +15,7 @@ const Home = () => {
         <SectionOne />
         <SectionTwo />
         <SectionThree />
+        <SectionFour />
       </main>
     </>
   );
