@@ -49,9 +49,8 @@ const SectionTwo = () => {
                         {imageLoading ? (
                           <LazyLoadImage
                             alt={title}
-                            height={"100%"}
+                            className="h-full w-full object-cover"
                             src={image} // use normal <img> attributes as props
-                            width={"100%"}
                           />
                         ) : (
                           <Blurhash

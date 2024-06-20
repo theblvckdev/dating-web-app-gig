@@ -58,6 +58,7 @@ const SectionThree = () => {
                 <Button
                   text="About R4M"
                   bgVariant="bg-secondary-0"
+                  linkURL="/"
                   color="text-white"
                   hover="hover:bg-gray-800 duration-200 ease-in"
                 />

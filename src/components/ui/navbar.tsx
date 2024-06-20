@@ -57,7 +57,7 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
   const [showNavbar, setShowNavbar] = useState<boolean>(true);
 
   const changeNavbarState: () => void = () => {
-    if (window.scrollY <= 1000) {
+    if (window.scrollY <= 60) {
       setShowNavbar(true);
     } else {
       setShowNavbar(false);
@@ -66,7 +66,6 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
 
   useEffect(() => {
     changeNavbarState();
-
     window.addEventListener("scroll", changeNavbarState);
   }, []);
 
