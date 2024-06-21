@@ -57,7 +57,7 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
   const [showNavbar, setShowNavbar] = useState<boolean>(true);
 
   const changeNavbarState: () => void = () => {
-    if (window.scrollY <= 60) {
+    if (window.scrollY <= window.innerHeight) {
       setShowNavbar(true);
     } else {
       setShowNavbar(false);
@@ -88,7 +88,7 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
   return (
     <header
       className={`${bgVariant} fixed top-0 duration-300 ease-in-out z-50 ${
-        showNavbar ? "top-0" : "-top-[20%]"
+        showNavbar ? "top-0" : "-top-[30%]"
       } left-0 w-screen z-50`}
     >
       <nav
