@@ -38,10 +38,10 @@ const Hero = () => {
         </div>
 
         {/* image overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 z-10"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-70 z-10"></div>
 
         {/* hero text */}
-        <h1 className="lg:text-7xl md:text-6xl text-4xl font-oswald text-primary-0 font-bold uppercase z-10">
+        <h1 className="xl:text-7xl lg:text-6xl md:text-6xl text-3xl font-oswald text-primary-0 font-bold uppercase z-10">
           MAKE THE NEXT MOVE
         </h1>
 

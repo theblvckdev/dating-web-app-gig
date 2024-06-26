@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { IoCloseOutline, IoMenuOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Logo from "./ui/logo";
 // import LogoImage from "../../assets/svg/r4m.svg";
 
 // function classNames(...classes: string[]) {
@@ -92,17 +93,11 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
       } left-0 w-screen z-50`}
     >
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between py-4 lg:px-8 md:px-5 px-3"
+        className="mx-auto flex max-w-7xl items-center justify-between py-2 lg:px-8 md:px-5 px-3"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link to="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">R4M</span>
-            {/* <img className="h-14 w-auto" src={LogoImage} alt="R4M logo" /> */}
-            <h1 className="text-secondary-0 text-4xl font-bold tracking-[-0.4rem] font-poppins">
-              R4M
-            </h1>
-          </Link>
+          <Logo />
         </div>
         <div className="flex lg:hidden">
           <button

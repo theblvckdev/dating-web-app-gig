@@ -1,5 +1,5 @@
-import Footer from "../../components/ui/footer";
-import Navbar from "../../components/ui/navbar";
+import Footer from "../../components/footer";
+import Navbar from "../../components/navbar";
 import "./assets/style/home.scss";
 import Hero from "./components/hero";
 import SectionFour from "./components/section_four";

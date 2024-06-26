@@ -23,11 +23,11 @@ const SectionTwo = () => {
     <>
       <section className="md:py-[6rem] py-[3rem] bg-white">
         <div className="mx-auto max-w-6xl xl:px-0 lg:px-10 md:px-10 px-3">
-          <h1 className="xl:text-8xl lg:text-7xl md:text-6xl text-3xl md:tracking-tighter md:font-bold font-black font-oswald text-secondary-0">
+          <h1 className="xl:text-7xl lg:text-6xl md:text-5xl text-2xl md:tracking-tighter font-bold font-oswald text-secondary-0">
             WE’RE NOT JUST FOR DATING
           </h1>
 
-          <div className="mt-16">
+          <div className="md:mt-16 mt-10">
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
               {categoriesData.map((data, index) => {
                 const { title, image, content, blurHash } = data;
@@ -65,11 +65,11 @@ const SectionTwo = () => {
                       </div>
 
                       <div className="mt-5">
-                        <h4 className="xl:text-4xl md:text-3xl text-3xl group-hover:underline font-poppins font-light capitalize text-secondary-0">
+                        <h4 className="xl:text-4xl md:text-3xl text-2xl group-hover:underline font-poppins font-light capitalize text-secondary-0">
                           {title}
                         </h4>
 
-                        <p className="mt-3 text-base font-poppins text-secondary-0">
+                        <p className="mt-3 md:text-base text-sm font-poppins text-secondary-0">
                           {content}
                         </p>
                       </div>

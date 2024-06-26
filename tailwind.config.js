@@ -4,14 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: ["#fff500"],
-        accent: ["#ffc629"],
+        primary: ["#dd3535"],
+        accent: ["#ee5c5c"],
         secondary: ["#343333"],
       },
     },
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
-      oswald: ["Oswald", "sans-serif"],
+      oswald: ["Rubik", "sans-serif"],
     },
   },
   plugins: [],

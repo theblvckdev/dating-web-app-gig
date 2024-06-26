@@ -20,7 +20,7 @@ const SectionThree = () => {
         <div className="mx-auto max-w-6xl xl:px-0 lg:px-10 md:px-10 px-3">
           <div className="flex md:flex-row flex-col lg:gap-20 gap-5 items-center">
             <div className="basis-1/2">
-              <div className="w-full lg:h-[550px] h-[400px] rounded-3xl overflow-hidden">
+              <div className="w-full lg:h-[550px] rounded-3xl overflow-hidden">
                 {imageLoading ? (
                   <img
                     src={SectionThreeImage}
@@ -41,11 +41,11 @@ const SectionThree = () => {
             </div>
 
             <div className="basis-1/2">
-              <h1 className="xl:text-8xl lg:text-7xl md:text-6xl text-[33px] md:tracking-tighter md:font-bold font-black font-oswald text-secondary-0 uppercase">
+              <h1 className="xl:text-7xl lg:text-6xl md:text-5xl text-2xl md:tracking-tighter font-bold font-oswald text-secondary-0 uppercase">
                 Make The <br className="md:block hidden" /> First move
               </h1>
 
-              <p className="mt-5 text-secondary-0 font-poppins lg:text-xl text-lg">
+              <p className="md:mt-5 text-secondary-0 font-poppins lg:text-xl md:text-lg text-sm">
                 {/* You deserve better, so we’ve designed great ways for{" "}
                 <br className="xl:block hidden" /> you to date more and stress
                 less. */}

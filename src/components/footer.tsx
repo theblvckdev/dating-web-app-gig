@@ -1,6 +1,6 @@
-import Button from "./button";
-import AppStoreBadge from "../../assets/svg/appstore-badge.svg";
-import PlayStoreBadge from "../../assets/images/google-play-badge.avif";
+import Button from "./ui/button";
+import AppStoreBadge from "../assets/svg/appstore-badge.svg";
+import PlayStoreBadge from "../assets/images/google-play-badge.avif";
 import { Link } from "react-router-dom";
 import { ReactElement } from "react";
 import {
