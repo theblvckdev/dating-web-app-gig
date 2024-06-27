@@ -21,7 +21,7 @@ const cardData: CardDataTypes[] = [
       />
     ),
     content:
-      "Healthy relationships are central to living a positive, productive life. Bumble is designed to help you feel empowered while you make those connections, whether you’re dating, looking for friends, or growing your professional network.",
+      "Healthy relationships are central to living a positive, productive life. R4M is designed to help you feel empowered while you make those connections, whether you’re dating, looking for friends, or growing your professional network.",
   },
 
   {
@@ -34,7 +34,7 @@ const cardData: CardDataTypes[] = [
       />
     ),
     content:
-      "On Bumble, women set the tone by making the first move or by setting an Opening Move for matches to reply to. Shifting old-fashioned power dynamics and encouraging equality from the start.",
+      "On R4M, women set the tone by making the first move or by setting an Opening Move for matches to reply to. Shifting old-fashioned power dynamics and encouraging equality from the start.",
   },
 
   {

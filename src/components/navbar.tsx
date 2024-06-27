@@ -46,11 +46,11 @@ const navbarData: NavbarDataTypes[] = [
     text: "Community guide lines",
     isActive: false,
   },
-  {
-    path: "/contacts",
-    text: "Contacts",
-    isActive: false,
-  },
+  // {
+  //   path: "/contacts",
+  //   text: "Contacts",
+  //   isActive: false,
+  // },
 ];
 
 export default function Navbar({ bgVariant }: { bgVariant: string }) {

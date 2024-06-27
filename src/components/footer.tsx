@@ -91,7 +91,7 @@ const Footer = () => {
     <>
       <footer className="py-[2rem] bg-white">
         <div className="mx-auto max-w-6xl xl:px-0 lg:px-10 md:px-10 px-3">
-          <div className="flex lg:flex-row flex-col gap-5 pb-10 border-b border-b-gray-300">
+          <div className="flex md:flex-row flex-col gap-5 pb-10 border-b border-b-gray-300">
             <div className="mr-auto">
               <div className="flex gap-3 items-center">
                 <Button
