@@ -136,8 +136,9 @@ const Footer = () => {
               </div>
 
               <div className="mt-1 text-[12px] font-poppins text-gray-500">
-                Apple and the Apple Logo are trademarks of Apple Inc. <br />{" "}
-                Google Play and the Google Play logo are trademarks of <br />{" "}
+                Apple and the Apple Logo are trademarks of Apple Inc.{" "}
+                <br className="md:block hidden" /> Google Play and the Google
+                Play logo are trademarks of <br className="md:block hidden" />{" "}
                 Google LLC.
               </div>
             </div>

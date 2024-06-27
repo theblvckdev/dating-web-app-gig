@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { IoCloseOutline, IoMenuOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "./ui/logo";
 // import LogoImage from "../../assets/svg/r4m.svg";
 
@@ -56,6 +56,7 @@ const navbarData: NavbarDataTypes[] = [
 export default function Navbar({ bgVariant }: { bgVariant: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const [showNavbar, setShowNavbar] = useState<boolean>(true);
+  const { pathname } = useLocation();
 
   const changeNavbarState: () => void = () => {
     if (window.scrollY <= window.innerHeight) {
@@ -68,7 +69,9 @@ export default function Navbar({ bgVariant }: { bgVariant: string }) {
   useEffect(() => {
     changeNavbarState();
     window.addEventListener("scroll", changeNavbarState);
-  }, []);
+
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   // const [isHomepage, setIsHomepage] = useState<boolean>(false);
 
