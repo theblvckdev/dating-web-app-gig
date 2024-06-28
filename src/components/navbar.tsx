@@ -41,11 +41,11 @@ const navbarData: NavbarDataTypes[] = [
     text: "Leader board",
     isActive: false,
   },
-  {
-    path: "/community-guide-lines",
-    text: "Community guide lines",
-    isActive: false,
-  },
+  // {
+  //   path: "/community-guide-lines",
+  //   text: "Community guide lines",
+  //   isActive: false,
+  // },
   // {
   //   path: "/contacts",
   //   text: "Contacts",

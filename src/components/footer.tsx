@@ -35,7 +35,11 @@ const footerLinks: FooterLinksTypes[] = [
   },
   {
     title: "Privacy Policy",
-    linkPath: "privacy-policy",
+    linkPath: "/privacy-policy",
+  },
+  {
+    title: "Community Guidelines",
+    linkPath: "/community-guidelines",
   },
 ];
 
