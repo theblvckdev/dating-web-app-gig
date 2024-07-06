@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
     <>
       <Navbar bgVariant="bg-white border-b border-b-secondary-0" />
 
-      <section className="mx-auto max-w-6xl xl:px-0 lg:px-10 md:px-10 px-3 mt-24 pb-5">
+      <section className="mx-auto max-w-6xl xl:px-0 lg:px-10 md:px-10 px-3 mt-24 pb-5 min-h-screen">
         <h1 className="xl:text-7xl lg:text-6xl md:text-5xl text-2xl md:tracking-tighter font-bold font-oswald text-secondary-0">
           Privacy Policy
         </h1>
